@@ -1,17 +1,43 @@
-// PHONE CHECKER
+const usdInput = document.querySelector("#usd");
+const somInput = document.querySelector("#som");
+const eurInput = document.querySelector("#eur");
 
-const phoneInput = document.querySelector('#phone_input')
-const phoneButton = document.querySelector('#phone_button')
-const phoneResult = document.querySelector('#phone_result')
+const converter = (element) => {
+  element.oninput = () => {
+    const request = new XMLHttpRequest();
+    request.open("GET", "../data/converter.json");
+    request.setRequestHeader("Content-type", "application/json");
+    request.send();
 
-const regExp = /^\+996 [2579]\d{2} \d{2}-\d{2}-\d{2}$/
+    request.onload = () => {
+      const data = JSON.parse(request.response);
+      if (element.id === "som") {
+        usdInput.value = (element.value / data.usd).toFixed(2);
+      }
+      if (element.id === "usd") {
+        somInput.value = (element.value * data.usd).toFixed(2);
+      }
+      if (element.id === "som") {
+        eurInput.value = (element.value / data.eur).toFixed(2);
+      }
+      if (element.id === "usd") {
+        eurInput.value = ((element.value * data.usd) / data.eur).toFixed(2);
+      }
+      if (element.id === "eur") {
+        somInput.value = (element.value * data.eur).toFixed(2);
+      }
+      if (element.id === "eur") {
+        usdInput.value = ((element.value * data.eur) / data.usd).toFixed(2);
+      }
+      if (element.value === "") {
+        somInput.value = "";
+        usdInput.value = "";
+        eurInput.value = "";
+      }
+    };
+  };
+};
 
-phoneButton.onclick = () => {
-    if (regExp.test(phoneInput.value)) {
-        phoneResult.innerHTML = 'OK'
-        phoneResult.style.color = 'green'
-    } else {
-        phoneResult.innerHTML = 'NOT OK'
-        phoneResult.style.color = 'red'
-    }
-}
+converter(somInput);
+converter(usdInput);
+converter(eurInput);

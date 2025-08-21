@@ -41,3 +41,7 @@ const converter = (element) => {
 converter(somInput);
 converter(usdInput);
 converter(eurInput);
+
+const name = "Tilek";
+console.log("Loading");
+console.log(name);

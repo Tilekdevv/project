@@ -1,5 +1,5 @@
 const modal = document.querySelector(".modal");
-const openModalBtn = document.querySelector("#btn-get");
+const modalOpenBtn = document.querySelector("#btn-get");
 const closeModalBtn = document.querySelector(".modal_close");
 
 const openModal = () => {
@@ -12,7 +12,7 @@ const closeModal = () => {
   document.body.style.overflow = "";
 };
 
-openModalBtn.onclick = openModal;
+modalOpenBtn.onclick = openModal;
 closeModalBtn.onclick = closeModal;
 modal.onclick = (event) => {
   if (event.target === modal) {

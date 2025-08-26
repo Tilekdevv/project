@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Toni Stark",
+    "age": 40,
+    "quote": "Правда в том, что... я Железный Человек",
+    "person_photo": "https://i.ytimg.com/vi/L2YvMGiWlIk/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAvBxFVIAZl-pfmdNJoSVEyNH32bA"
+  },
+  {
+    "name": "Tor",
+    "age": 43,
+    "quote": "Я Тор, сын Одина, и покуда в груди моей бьётся сердце, я... не мастер долгих и занудных речей.",
+    "person_photo": "https://citaty.info/files/portraits/tor.jpg"
+  },
+  {
+    "name": "Badman",
+    "age": 44,
+    "quote": "Страх — это питающийся самим собой каннибал. Он живёт в каждой тени, поджидает в каждом углу.",
+    "person_photo": "https://videofileblog.com/wp-content/uploads/2022/08/batman-returns-1992-batman.jpg"
+  }
+]

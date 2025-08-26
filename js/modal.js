@@ -20,5 +20,5 @@ modal.onclick = (event) => {
   }
 };
 
-// window.addEventListener("scroll");
-// window.removeEventListener("scroll");
+window.addEventListener("scroll");
+window.removeEventListener("scroll");
